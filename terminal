@@ -32,3 +32,17 @@ git remote add origin https://github.com/oijorgefilho/jamez-home.git
 
 # Enviar para o GitHub
 git push -u origin main 
+
+# Remover node_modules e lock files
+rm -rf node_modules package-lock.json
+
+# Instalar dependências com a versão correta
+npm install
+
+# Verificar status e fazer commit
+git status
+git add .
+git commit -m "fix: ajusta versão do date-fns para compatibilidade com react-day-picker"
+
+# Enviar para o GitHub
+git push -u origin main 
