@@ -2,23 +2,29 @@ npm uninstall date-fns
 npm install date-fns@3.0.0
 npm install --force 
 
-# Remover configuração Git anterior (se existir)
+# Remover node_modules e .next
+rm -rf node_modules .next
+
+# Remover configuração Git anterior
 rm -rf .git
 
-# Inicializar novo repositório Git
+# Inicializar novo repositório
 git init
 
-# Configurar seu usuário
+# Configurar usuário
 git config --global user.name "oijorgefilho"
-git config --global user.email "seu-email@github"
+git config --global user.email "oijorgefilho@gmail.com"
 
-# Adicionar arquivos
+# Verificar status das mudanças
+git status
+
+# Adicionar todas as mudanças
 git add .
 
-# Criar commit inicial
-git commit -m "Initial commit"
+# Criar commit com as alterações
+git commit -m "fix: atualiza dependências e adiciona Dockerfile"
 
-# Configurar branch principal como 'main'
+# Configurar branch principal
 git branch -M main
 
 # Adicionar repositório remoto
