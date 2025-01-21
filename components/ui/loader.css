@@ -1,0 +1,27 @@
+.loader {
+  width: 40px;
+  aspect-ratio: 1;
+  background:
+    radial-gradient(farthest-side,#ffa516 90%,#0000) center/9px 9px,
+    radial-gradient(farthest-side,green   90%,#0000) bottom/7px 7px;
+  background-repeat: no-repeat;
+  animation: l17 1s infinite linear;
+  position: relative;
+}
+.loader::before {    
+  content:"";
+  position: absolute;
+  width: 4px;
+  aspect-ratio: 1;
+  inset: auto 0 9px;
+  margin: auto;
+  background: #ccc;
+  border-radius: 50%;
+  transform-origin: 50% calc(100% + 5px);
+  animation: inherit;
+  animation-duration: 0.5s;
+}
+@keyframes l17 { 
+  100%{transform: rotate(1turn)}
+}
+

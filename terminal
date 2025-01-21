@@ -1,0 +1,28 @@
+npm uninstall date-fns
+npm install date-fns@3.0.0
+npm install --force 
+
+# Remover configuração Git anterior (se existir)
+rm -rf .git
+
+# Inicializar novo repositório Git
+git init
+
+# Configurar seu usuário
+git config --global user.name "oijorgefilho"
+git config --global user.email "seu-email@github"
+
+# Adicionar arquivos
+git add .
+
+# Criar commit inicial
+git commit -m "Initial commit"
+
+# Configurar branch principal como 'main'
+git branch -M main
+
+# Adicionar repositório remoto
+git remote add origin https://github.com/oijorgefilho/jamez-home.git
+
+# Enviar para o GitHub
+git push -u origin main 
